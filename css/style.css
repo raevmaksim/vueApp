@@ -35,6 +35,7 @@ i.fa {
   justify-content: space-between;
   overflow: hidden;
 }
+/* firstScreen */
 .app__header {
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom: solid 7px #fdb54d;
@@ -77,4 +78,88 @@ i.fa {
 }
 .app__btn:focus {
   outline: none;
+}
+
+/* archivments */
+
+.achivments .app__body {
+  justify-content: flex-start;
+}
+.app__body-inner {
+  width: 100%;
+  min-width: 375px;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.app__body-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.app__body-top {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: max-content max-content;
+  place-content: center center;
+  margin-bottom: 20px;  
+  border: solid 5px rgba(1, 88, 154, 0.5);
+}
+.app__card {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 10px;
+  text-align: center;
+  border: none;
+}
+.app__card-text {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.app__card-count {
+  font-size: 18px;
+}
+.app__body-middle {
+  margin-bottom: 15px;
+}
+.app__result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border: solid 5px rgba(1, 88, 154, 0.5);
+  background-color: rgba(25, 121, 211, 0.8);
+}
+.app__result:last-child {
+  margin-bottom: 0;
+}
+i.fa-star {
+  margin-right: 0;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+.app__result-name {
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.app__result-amount {
+  font-size: 18px;
+}
+.app__body-bottom {
+}
+.app__btn {
+}
+.btn__back {
+  width: 70px;
+  height: 70px;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.btn__achivment {
+  border: solid 5px rgba(1, 88, 154, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
