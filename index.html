@@ -37,7 +37,7 @@
           </div>
         </button>
         <button class="app__btn btn__sound">
-          <i class="fa fa-volume-up" aria-hidden="true"></i>"
+          <i class="fa fa-volume-off" aria-hidden="true"></i>"
           <div class="app__btn-text">
             Звук
           </div>
@@ -324,6 +324,31 @@
         }        
       }
 
+    })
+    let audio = new Audio('audio/soundtrack.mp3')
+    let audioBtn =document.querySelector('.btn__sound')
+    let audioIcon = document.querySelector('.btn__sound i')
+
+
+    audio.muted = true;
+    audio.autoplay = true;
+    audio.volume = 0.2;
+
+    audio.addEventListener('loadmetadata', function() {
+      audio.currentTime = Math.random() * (audio.duration + 1)
+    })
+
+    audioBtn.addEventListener('click', function() {
+      if (audio.muted) {
+        audio.muted = false
+        audioIcon.classList.add('fa-volume-up')
+        audioIcon.classList.remove('fa-volume-off')
+        
+      } else if (!audio.muted) {
+        audio.muted = true
+        audioIcon.classList.add('fa-volume-off')
+        audioIcon.classList.remove('fa-volume-up')        
+      }
     })
   </script>
 </body>
